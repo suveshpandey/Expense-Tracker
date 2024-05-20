@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Expense Tracker</title>
+</head>
+<body class="bg-[#d8cacc] flex flex-col items-center justify-center h-auto min-h-[100vh]">
+    <div class="bg-[white] sm:w-auto w-full h-auto  p-[10px] px-[30px] border-[5px] border-[grey]">
+        <!-- <h1 class="text-[30px] font-serif font-bold text-center">Expense Tracker</h1> -->
+        <h1 class="text-[30px] font-serif font-bold text-center" style="color: #350630; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); letter-spacing: 1px;">Expense Tracker</h1>
+        <div class="container my-[30px] mx-auto sm:w-[350px] w-auto">
+            <h2 class="text-[20px] font-bold">YOUR BALANCE</h2>
+            <h2 id="balance" class="text-[40px] text-[#141438] font-bold mb-[20px] shadow-sm">&#8377; 0.00</h2>
+
+            <!-- income-expence sections starts -->
+            <div class="inc-epx-container">
+                <div class="">
+                    <h3 class="font-bold">INCOME</h3>
+                    <p id="money-plus" class="money-plus  font-semibold text-[#2ecc71]">
+                        +&#8377; 0.00
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="font-bold">EXPENCE</h3>
+                    <p id="money-minus" class="money-minus font-semibold text-[#c0392b]">
+                        -&#8377; 0.00
+                    </p>
+                </div>
+            </div>
+            <!-- income-expence sections starts -->
+
+
+
+            <!-- history sections starts -->
+            <h2 class="text-[20px] font-bold border-b-[1px] border-b-[#bbb] pb-[10px] mt-[40px] mb-[10px]">HISTORY</h2>
+            <ul id="list" class="list">
+                <!-- <li class=" minus">
+                    Cash <span>-&#8377;400</span>
+                    <button class="delete-btn">X</button>
+                </li> -->
+            </ul>
+            <!-- history sections ends -->
+            
+
+            <!-- add new transaction starts here -->
+            <h2 class="text-[20px] font-bold  border-b-[1px] border-b-[#bbb] pb-[10px] mt-[40px] mb-[10px]">ADD NEW TRANSACTIONS</h2>
+            <form id="form">
+                <div class="form-control">
+                    <label for="Text" class="inline-block font-semibold ">Text</label>
+                    <input type="text" id = "text" class="border-[1px] border-[#dedede] rounded-[2px] block text-[16px] p-[10px] w-[100%]" placeholder="Enter Text...">
+                </div>
+                <div class="form-control">
+                    <label for="amount" class="inline-block font-semibold  mt-[5px]">Amount <br> <h4 class="text-[#534f4f]">(<span class="text-[#e24b3a]">-</span> expense, <span class="text-[#2ecc71]">+</span> income)</h4> </label>
+                    <input type="number" id = "amount" class="border-[1px] border-[#dedede] rounded-[2px] block text-[16px] p-[10px] w-[100%]" placeholder="Enter Amount...">
+                </div>
+                <button class="btn cursor-pointer bg-[#0f0f5f] p-[5px] mt-[10px] text-[white] border-0  block text-[16px] font-semibold w-[100%] hover:bg-[#3c7ded] transition-colors ">Add Transaction</button>
+                <!-- add new transaction ends here -->
+            </form>
+        </div>
+    </div>
+
+    <!-- js file -->
+    <script src="script.js"></script>
+</body>
+</html>
